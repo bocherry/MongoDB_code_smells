@@ -7,9 +7,14 @@ Read more <a href="https://stackoverflow.com/questions/12403240/storing-null-vs-
 
 ## Example
 
-<pre><code>db.users.insert({"firstname": "John", "surname": "Doe", "age": null})</code></pre>
+```js
+
+db.users.insert({"firstname": "John", "surname": "Doe", "age": null})
+```
 
 ## Solution
 
 The empty age field can be omitted:
-<pre><code>db.users.insert({"firstname": "John", "surname": "Doe"})</code></pre>
+```js
+db.users.insert({"firstname": "John", "surname": "Doe"})
+```

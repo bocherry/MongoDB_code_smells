@@ -7,7 +7,9 @@
 ## Example
 
 <p>Suppose the following collection:</p>
-<pre><code>db={
+
+```json
+{
   "beers": [
     {
       "_id": 1,
@@ -24,12 +26,17 @@
       "liter_per_case": 6
     }
   ]
-}</code></pre>
+}
+
+```
 
 ## Solution
 
 The <code>liter_per_case</code> can be deleted as the program can compute it when needed:
-<pre><code>db={
+
+```json
+
+{
   "beers": [
     {
       "_id": 1,
@@ -44,4 +51,5 @@ The <code>liter_per_case</code> can be deleted as the program can compute it whe
       "bottle_liter_capacity": 0.25,
     }
   ]
-}</code></pre>
+}
+```

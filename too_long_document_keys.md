@@ -11,7 +11,10 @@ Read more <a href="https://www.tutorialfor.com/blog-198278.htm" target="_blank">
 
 
 <p>Suppose the following collection:</p>
-<pre><code>db={
+
+```json
+
+{
   "users": [
     {
       "_id": "a644be96-c4a3-11ec-9d64-0242ac120002",
@@ -26,10 +29,17 @@ Read more <a href="https://www.tutorialfor.com/blog-198278.htm" target="_blank">
       "job": "Postdoctoral assistant"
     }
   ]
-}</code></pre>
+}
+
+```
 
 <p>One can insert a new document into this collection as follows:</p>
-<pre><code>db.users.insert({"_id": new UUID(), "firstname": "Ada", "surname": "Lovelace", "job": "Programmer"})</code></pre>
+
+```js
+
+db.users.insert({"_id": new UUID(), "firstname": "Ada", "surname": "Lovelace", "job": "Programmer"})
+
+```
 
 
 ## Solution
@@ -37,7 +47,9 @@ Read more <a href="https://www.tutorialfor.com/blog-198278.htm" target="_blank">
 
 <p>Use the native MongoDB ObjectId as a shorter alternative of UUID (see <a href="https://www.mongodb.com/docs/manual/reference/method/ObjectId/">here</a>):</p>
 
-<pre><code>db={
+```json
+
+{
   "users": [
     {
       "_id": "3ca3913d1a647164c521c033",
@@ -52,7 +64,9 @@ Read more <a href="https://www.tutorialfor.com/blog-198278.htm" target="_blank">
       "job": "Postdoctoral assistant"
     }
   ]
-}</code></pre>
+}
+
+```
 
 <p>One can insert a new document into this collection as follows:</p>
 <pre><code>db.users.insert({"firstname": "Ada", "surname": "Lovelace", "job": "Programmer"})</code></pre>

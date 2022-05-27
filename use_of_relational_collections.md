@@ -8,7 +8,10 @@ Read more <a href="https://www.tutorialfor.com/blog-198278.htm" target="_blank">
 ## Example 
 
 <p>Let's assume the following collections:</p>
-<pre><code>db={
+
+```json
+
+{
   "cars": [
     {
       "_id": 1,
@@ -52,10 +55,15 @@ Read more <a href="https://www.tutorialfor.com/blog-198278.htm" target="_blank">
       "car_id": 2
     },
   ]
-}</code></pre>
+}
+
+```
 
 <p>To retrieve the crashes' information, one needs to do two <code>$lookup</code> operations as follows:</p>
-<pre><code>db.carcrashes.aggregate([
+
+```js
+
+db.carcrashes.aggregate([
   {
     "$lookup": {
       "from": "cars",
@@ -72,12 +80,15 @@ Read more <a href="https://www.tutorialfor.com/blog-198278.htm" target="_blank">
       "as": "crashes"
     }
   }
-])</code></pre>
+])
+
+```
 
 ## Solution
 
 The M-N relationship can be represented to one of the collections as such:
-<pre><code>db={
+```json
+{
   "cars": [
     {
       "_id": 1,
@@ -106,4 +117,6 @@ The M-N relationship can be represented to one of the collections as such:
       "cars_implicated": ["2"]
     }
   ]
-}</code></pre>
+}
+
+```

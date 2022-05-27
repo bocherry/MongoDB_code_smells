@@ -10,7 +10,11 @@ Read more [here](https://www.mongodb.com/developer/article/schema-design-anti-pa
 ## Example
 
 <p>Suppose the following collections:</p>
-<pre><code>db={
+
+```json
+
+
+{
   "countries": [
     {
       "_id": 1,
@@ -47,11 +51,15 @@ Read more [here](https://www.mongodb.com/developer/article/schema-design-anti-pa
       "country": 2
     }
   ]
-}</code></pre>
+}
+
+```
 
 <p>To query the countries' cities, one needs to do a <code>$lookup</code> that would become inefficient with more data:</p>
 
-<pre><code>db.countries.aggregate([
+```js
+
+db.countries.aggregate([
   {
     "$lookup": {
       "from": "cities",
@@ -60,12 +68,18 @@ Read more [here](https://www.mongodb.com/developer/article/schema-design-anti-pa
       "as": "country_cities"
     }
   }
-])</code></pre>
+])
+
+```
 
 ## Solution
 
 The cities could be stored together with the countries as follows:
-<pre><code>[
+
+```json
+
+
+[
   {
     "_id": 1,
     "name": "Switzerland",
@@ -100,4 +114,6 @@ The cities could be stored together with the countries as follows:
       }
     ]
   }
-]</code></pre>
+]
+
+```

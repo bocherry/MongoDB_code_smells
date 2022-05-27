@@ -7,7 +7,10 @@
 ## Example
 
 <p>Suppose the following collection:</p>
-<pre><code>db={
+
+```json
+
+{
   "books": [
     {
       "_id": 1,
@@ -28,23 +31,32 @@
       "title": "On certainty"
     }
   ]
-}</code></pre>
+}
+
+```
 
 <p>The following query would not result in any document because of the wrong field order:</p>
-<pre><code>
+
+```js
+
+
 db.books.find({
   "author": {
     "firstname": "George",
     "surname": "Orwell"
   }
-})</code></pre>
+})
+
+```
 
 
 ## Solution
 
 The order of author's attributes should be consistent:
 
-<pre><code>db={
+```json
+
+{
   "books": [
     {
       "_id": 1,
@@ -65,4 +77,6 @@ The order of author's attributes should be consistent:
       "title": "On certainty"
     } 
   ]
-}</code></pre>
+}
+
+```

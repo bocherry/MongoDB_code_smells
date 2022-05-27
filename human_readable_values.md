@@ -7,7 +7,10 @@
 ## Examples
 
 <p>Suppose the following collection:</p>
-<pre><code>db={
+
+```js
+
+{
   "users": [
     {
       "_id": 1,
@@ -22,12 +25,17 @@
       "birthdate": "June 23, 1912"
     }
   ]
-}</code></pre>
+}
+
+```
 
 ## Solutions
 
 The <code>birthdate</code> could be replaced with a native date type of MongoDB:
-<pre><code>db={
+
+```js
+
+{
   "users": [
     {
       "_id": 1,
@@ -42,4 +50,6 @@ The <code>birthdate</code> could be replaced with a native date type of MongoDB:
       "birthdate": ISODate(“1912-06-23T00:00:00Z”)
     }
   ]
-}</code></pre>
+}
+
+```

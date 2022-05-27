@@ -11,45 +11,50 @@ Read more <a href="https://www.linkedin.com/pulse/big-data-anti-patterns-marc-ke
 
 
 <p>Suppose the following collection:</p>
-<pre><code>db={
+
+```json
+{
   "books": [
     {
       "_id": 1,
       "international_standard_book_number": 9780140817744,
       "author": "George Orwell",
       "title": "1984",
-      
     },
     {
       "_id": 2,
       "international_standard_book_number": 9780631120001,
       "author": "Ludwig Wittgenstein",
       "title": "On certainty",
-      
     }    
   ]
-}</code></pre>
+}
+```
 
 
 ## Solution
 
 
 The <code>international_standard_book_number</code> attribute name can be shortened to <code>isbn</code>:
-<pre><code>db={
+
+```json
+
+
+{
   "books": [
     {
       "_id": 1,
       "isbn": 9780140817744,
       "author": "George Orwell",
       "title": "1984",
-      
     },
     {
       "_id": 2,
       "isbn": 9780631120001,
       "author": "Ludwig Wittgenstein",
       "title": "On certainty",
-      
     }
   ]
-}</code></pre>
+}
+
+```

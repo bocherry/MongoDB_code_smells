@@ -10,7 +10,11 @@ Read more <a href="https://www.mongodb.com/developer/article/3-things-to-know-sw
 ## Example
 
 <p>The following code snippet with a transaction indicates that users and their jobs are unnecessary broken to separate collections.</p>
-<pre><code>try {
+
+```js
+
+
+try {
   await session.withTransaction(async () => {
       const users = db.users;
       const jobs = db.jobs;
@@ -20,13 +24,17 @@ Read more <a href="https://www.mongodb.com/developer/article/3-things-to-know-sw
 } finally {
     await session.endSession();
     await client.close();
-}</code></pre>
+}
+
+```
 
 ## Solution
 
 <p>The job collection should be embedded into the user:</p>
 
-<pre><code>db={
+```json
+
+{
   "users": [
     {
       "_id": 1,
@@ -47,7 +55,11 @@ Read more <a href="https://www.mongodb.com/developer/article/3-things-to-know-sw
       "job": "Professor"
     }
   ]
-}</pre></code>
+}
+```
 
 <p>Inserting a new user can be achieved with a single operation:</p>
-<pre><code>db.users.insert({"firstname": "Ada", "surname": "Lovelace", "job": "Programmer"})</code></pre>
+
+```js
+db.users.insert({"firstname": "Ada", "surname": "Lovelace", "job": "Programmer"})
+```
