@@ -69,4 +69,9 @@ db.users.insert({"_id": new UUID(), "firstname": "Ada", "surname": "Lovelace", "
 ```
 
 <p>One can insert a new document into this collection as follows:</p>
-<pre><code>db.users.insert({"firstname": "Ada", "surname": "Lovelace", "job": "Programmer"})</code></pre>
+
+```js
+
+db.users.insert({"firstname": "Ada", "surname": "Lovelace", "job": "Programmer"})
+
+```
